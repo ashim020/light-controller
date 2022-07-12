@@ -25,8 +25,6 @@ global LEDbrightness
 global brightnessMenu
 global data
 
-#hi
-
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
@@ -56,7 +54,7 @@ class LightController(customtkinter.CTk):
         self.host = "192.168.93.81"
         self.port = 80
         self.title("Light Controller")
-        self.iconbitmap(PATH + '/1564159150695.ico')
+        self.iconbitmap(PATH + '/images/1564159150695.ico')
         self.geometry(f"{LightController.WIDTH}x{LightController.HEIGHT}")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)  # call .on_closing() when app gets closed
 
@@ -177,7 +175,7 @@ class LightController(customtkinter.CTk):
         self.frame_info.rowconfigure(0, weight=1)
         self.frame_info.columnconfigure(0, weight=1)
 
-        img_1 = ImageTk.PhotoImage(Image.open(PATH + '\INDI-EV-Logo-Black_color select_final_cropped.jpg').resize((700, 700)))
+        img_1 = ImageTk.PhotoImage(Image.open(PATH + '\images\INDI-EV-Logo-Black_color select_final_cropped.jpg').resize((700, 700)))
         #img_2 = ImageTk.PhotoImage(Image.open(PATH + '\BlackBackground.jpg').resize((600, 600)))
     
 
